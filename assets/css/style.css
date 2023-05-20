@@ -3067,3 +3067,41 @@ canvas {
       -ms-flex-align: center;
           align-items: center;
 }
+
+
+#tobutton {
+  display: inline-block;
+  background-color: #00f6ff;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 4px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition: background-color .3s, 
+    opacity .5s, visibility .5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+}
+#tobutton::after {
+  content: "\f077";
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 2em;
+  line-height: 50px;
+  color: #0a101e;
+}
+#tobutton:hover {
+  cursor: pointer;
+  background-color: #00b3b9;
+}
+#tobutton:active {
+  background-color: #555;
+}
+#tobutton.show {
+  opacity: 1;
+  visibility: visible;
+}
